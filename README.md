@@ -1,7 +1,7 @@
 # ECS171_Group_6
 
 ## Team members:
-Nick Abcarius, Andrey Yakymovych, Lia Freed-Doerr, Sabarno Islam, Zibo Zhang, Joshua Winter, Emma Baier, Kwan Tien Ooi
+Nick Abcarius, Andrey Yakymovych, Lia Freed-Doerr, Sabarno Islam, Zibo Zhang, Joshua Winter, Emma Baier, Kwan Tien Ooi, Yi-Hsuan Cheng
 # Write-up:
 
 For over a year, global travel has been at a standstill due to public safety protocols. Now, as COVID-19 cases have begun to decrease, the world is opening back up and people are developing their summer travel plans. We wish to enable individuals to make a smart choice for their travel destination so that the spread of the virus continues to decline.
