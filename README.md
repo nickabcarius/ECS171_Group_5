@@ -4,7 +4,7 @@
 Nick Abcarius, Andrey Yakymovych, Lia Freed-Doerr, Sabarno Islam, Zibo Zhang, Joshua Winter, Emma Baier, Kwan Tien Ooi, Yi-Hsuan Cheng
 
 # Website
-[https://nmabcarius.github.io/ECS171_Group_5/index.html](link)
+[link](https://nmabcarius.github.io/ECS171_Group_5/index.html)
 
 
 
