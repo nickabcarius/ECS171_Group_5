@@ -27,27 +27,27 @@ Since we are trying to predict the proportion of individuals in a given region (
 
 04/13 @11:30 PM:  Turn in 1 page write-up
 
-04/17 @11:30 PM:  Milestone 1:
+04/18 @11:30 PM:  Milestone 1:
 
 -   Examined dataset, created list of usable columns
 -   Make simple webpage that we can hook into our github repository
 
-04/24 @11:30 PM:  Milestone 2:
+04/25 @11:30 PM:  Milestone 2:
 
 -   Cleaned up dataset and created outline for data analysis code
 -   Created map graphics and clickable regions
 
-05/1 @11:30 PM:  Milestone 3:
+05/2 @11:30 PM:  Milestone 3:
 
 -   Code (1/2) of data analysis
 -   Created color mappings and implemented slider
 
-05/8 @11:30 PM:  Milestone 4:
+05/9 @11:30 PM:  Milestone 4:
 
 -   Coded (2/2) of data analysis
 -   Start connecting back end to front end
 
-05/15 @11:30 PM:  Milestone 5:
+05/16 @11:30 PM:  Milestone 5:
 
 -   Finish connecting back end to front end
 
