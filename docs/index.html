@@ -4,7 +4,7 @@
     <h1>COVID-19 Infection Rates</h1>
     <p>ECS 171 Group 5</p>
     <p>Use the slider to show a rate at a given time</p>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body>
@@ -57,14 +57,18 @@
     <h1>Date Range Slider</h1>
 
     <div class="slidecontainer">
-      <input
-        type="range"
-        min="0"
-        max="400"
-        value="0"
-        class="slider"
-        id="myRange"
-      />
+      <form method="POST" action="test">
+        <input
+          type="range"
+          min="0"
+          max="400"
+          value="0"
+          class="slider"
+          id="myRange"
+          name="day_slider"
+        />
+        <input type="submit" value="submit" />
+      </form>
       <p>Day: <span id="demo"></span></p>
     </div>
 
@@ -77,6 +81,24 @@
         output.innerHTML = this.value;
       };
     </script>
-    <main></main>
+    <main>
+      <p class="bold">test</p>
+      <p>enter some text</p>
+      <form>
+        <input type="text" maxlength="100" placeholder="text">
+        <button type="submit">Submit</button>
+      </form>
+      <section class="dreams">
+        <ul id="dreams">
+        </ul>
+      </section>
+    </main>
+    
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="data_out.js"></script>
+    
   </body>
 </html>
