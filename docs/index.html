@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <h1>Hello World</h1>
-  <p>I'm hosted with GitHub Pages.</p>
-</head>
-  
-<body>
-  
-<div id="container"></div>
-<!-- /container -->  
-  
-<script src="./raphael-min.js"></script>
-<script src="./us-map-svg.js"></script>
-<script>
-  window.onload = function () {
-    var R = Raphael("container", 1000, 900),
-      attr = {
-      "fill": "#d3d3d3",
-      "stroke": "#fff",
-      "stroke-opacity": "1",
-      "stroke-linejoin": "round",
-      "stroke-miterlimit": "4",
-      "stroke-width": "0.75",
-      "stroke-dasharray": "none"
-    },
-    usRaphael = {};
-    
-    //Draw Map and store Raphael paths
-    for (var state in usMap) {
-      usRaphael[state] = R.path(usMap[state]).attr(attr);
-    }
-    
-    //Do Work on Map
-    for (var state in usRaphael) {
-      usRaphael[state].color = Raphael.getColor();
-      
-      (function (st, state) {
+  <head>
+    <h1>COVID-19 Infection Rates</h1>
+    <p>ECS 171 Group 5</p>
+    <p>Use the slider to show a rate at a given time</p>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-        st[0].style.cursor = "pointer";
+  <body>
+    <div id="map"></div>
 
-        st[0].onmouseover = function () {
-          st.animate({fill: st.color}, 500);
-          st.toFront();
-          R.safari();
-        };
+    <script src="./raphael-min.js"></script>
+    <script src="./us-map-svg.js"></script>
+    <script>
+      window.onload = function() {
+        var R = Raphael("map", 950, 600),
+          attr = {
+            fill: "#d3d3d3",
+            stroke: "#fff",
+            "stroke-opacity": "1",
+            "stroke-linejoin": "round",
+            "stroke-miterlimit": "4",
+            "stroke-width": "0.75",
+            "stroke-dasharray": "none"
+          },
+          usRaphael = {};
 
-        st[0].onmouseout = function () {
-          st.animate({fill: "#d3d3d3"}, 500);
-          st.toFront();
-          R.safari();
-        };
-                   
-      })(usRaphael[state], state);
-    }
-            
-  };
-</script>
-</body>
+        //Draw Map and store Raphael paths
+        for (var state in usMap) {
+          usRaphael[state] = R.path(usMap[state]).attr(attr);
+        }
+
+        //Do Work on Map
+        for (var state in usRaphael) {
+          usRaphael[state].color = Raphael.getColor();
+
+          (function(st, state) {
+            st[0].style.cursor = "pointer";
+
+            st[0].onmouseover = function() {
+              st.animate({ fill: st.color }, 500);
+              st.toFront();
+              R.safari();
+            };
+
+            st[0].onmouseout = function() {
+              st.animate({ fill: "#d3d3d3" }, 500);
+              st.toFront();
+              R.safari();
+            };
+          })(usRaphael[state], state);
+        }
+      };
+    </script>
+
+    <h1>Date Range Slider</h1>
+
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="0"
+        max="400"
+        value="0"
+        class="slider"
+        id="myRange"
+      />
+      <p>Day: <span id="demo"></span></p>
+    </div>
+
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      };
+    </script>
+    <main></main>
+  </body>
 </html>

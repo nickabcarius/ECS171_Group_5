@@ -1,0 +1,47 @@
+h1 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  #map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 64px;
+    height: 64px;
+    border: 0;
+    background: url("iconfinder_coronavirus-sars-mers-flu-virus-influenza_5728184.png");
+    transform: scale(0.7);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 64px;
+    height: 64px;
+    border: 0;
+    background: url("iconfinder_coronavirus-sars-mers-flu-virus-influenza_5728184.png");
+    cursor: pointer;
+  }
