@@ -1,4 +1,4 @@
 $(function() {
-    console.log('hello world');
+    console.log('This means that ajax is working');
   });
   
