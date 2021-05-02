@@ -1,4 +1,4 @@
-# ECS171_Group_6
+# ECS171_Group_5
 
 ## Team members:
 Nick Abcarius, Andrey Yakymovych, Lia Freed-Doerr, Sabarno Islam, Zibo Zhang, Joshua Winter, Emma Baier, Kwan Tien Ooi, Yi-Hsuan Cheng
