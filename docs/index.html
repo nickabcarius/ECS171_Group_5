@@ -6,59 +6,20 @@
     <p>Use the slider to show a rate at a given time</p>
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="data_out.js"></script>
+    <script src="./raphael-min.js"></script>
+    <script src="./us-map-svg.js"></script>
+    <script src="./map.js"></script>
   </head>
 
   <body>
     <div id="map"></div>
 
-    <script src="./raphael-min.js"></script>
-    <script src="./us-map-svg.js"></script>
-    <script>
-      window.onload = function() {
-        var R = Raphael("map", 950, 600),
-          attr = {
-            fill: "#d3d3d3",
-            stroke: "#fff",
-            "stroke-opacity": "1",
-            "stroke-linejoin": "round",
-            "stroke-miterlimit": "4",
-            "stroke-width": "0.75",
-            "stroke-dasharray": "none"
-          },
-          usRaphael = {};
-
-        //Draw Map and store Raphael paths
-        for (var state in usMap) {
-          usRaphael[state] = R.path(usMap[state]).attr(attr);
-        }
-
-        //Do Work on Map
-        for (var state in usRaphael) {
-          usRaphael[state].color = Raphael.getColor();
-
-          (function(st, state) {
-            st[0].style.cursor = "pointer";
-
-            st[0].onmouseover = function() {
-              st.animate({ fill: st.color }, 500);
-              st.toFront();
-              R.safari();
-            };
-
-            st[0].onmouseout = function() {
-              st.animate({ fill: "#d3d3d3" }, 500);
-              st.toFront();
-              R.safari();
-            };
-          })(usRaphael[state], state);
-        }
-      };
-    </script>
 
     <h1>Date Range Slider</h1>
 
     <div class="slidecontainer">
-      <form method="POST" action="test">
+      <form method="POST" action="/get_day">
         <input
           type="range"
           min="0"
@@ -77,13 +38,13 @@
       var slider = document.getElementById("myRange");
       var output = document.getElementById("demo");
       output.innerHTML = slider.value;
-
       slider.oninput = function() {
         output.innerHTML = this.value;
       };
     </script>
-    <script src="data_out.js"></script>
     
-    <main></main>
+    <main>
+
+    </main>
   </body>
 </html>
