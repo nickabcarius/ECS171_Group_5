@@ -1,30 +1,25 @@
+
 import os
-from flask import Flask, request, render_template, jsonify
+import pandas as pd
+import matplotlib
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
+import numpy as np
 
-
-
-####TRYING TO GET VALUE FROM SLIDER
-
-app = Flask(__name__, static_folder='docs', template_folder='docs')
-
-@app.route("/get_day", methods=["POST"])
-def get_day():
-    day_slider = request.form["day_slider"]
-    return day_slider
-
-
-if __name__ == '__main__':
-    app.run()
-
-
+def graph(day):
+  s = pd.Series(np.arange(0,int(day),1))
+  print("graphing", s)
+  fig, ax = plt.subplots()
+  s.plot.bar()
   
-# import pandas
-# # df = pandas.read_csv("https://storage.googleapis.com/covid19-open-data/v2/latest/main.csv")
-
-# df = pandas.read_csv(".\covid_us.csv")
-# df.drop(labels = "Unnamed: 0", axis = 1, inplace = True)
-
-
-
-# print(df.head)
-# print(list(df.columns))
+  for filename in os.listdir('static/'):
+      if filename.startswith('plot'):
+          os.remove('static/' + filename)
+          
+  plt.savefig('static/plot.png')
+  print("graphed")
+  return "plot.png"
+  
+  
+  
+  

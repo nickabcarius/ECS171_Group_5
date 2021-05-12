@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <h1>COVID-19 Infection Rates</h1>
+  <p>ECS 171 Group 5!</p>
+  <p>Use the slider to show infection rate at a given time.</p>
+
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/style.css') }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- <script src="data_out.js"></script>
+  <script src="./raphael-min.js"></script>
+  <script src="./us-map-svg.js"></script>
+  <script src="./map.js"></script> -->
+
+  <script src="{{url_for('raphael_min')}}"></script>
+  <script src="{{url_for('us_map_svg')}}"></script>
+  <script src="{{url_for('map')}}"></script>
+
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <h2>Date Range Slider</h2>
+
+      <div class="slidecontainer">
+      <form method="POST" action="graph">
+        <input
+          type="range"
+          min="1"
+          max="400"
+          value="1"
+          class="slider"
+          id="myRange"
+          name="day_slider"
+        />
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+      <p>Day: <span id="demo"></span></p>
+    </div>
+
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      };
+    </script>
+
+  <main>
+
+    <h1>PUT GRAPH HERE</h1>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <img src="{{ url_for('static', filename=plot) }}">
+
+  </main>
+  
+</body>
+
+</html>
