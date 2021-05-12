@@ -1,49 +1,74 @@
 h1 {
-    text-align: center;
-  }
-  
-  p {
-    text-align: center;
-  }
-  
-  #map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .slidecontainer {
-    width: 100%;
-  }
-  
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: #d3d3d3;
-    outline: none;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 64px;
-    height: 64px;
-    border: 0;
-    /* Covid icon is free from https://www.iconfinder.com/iconsets/coronavirus-flat?utm_campaign=Virus%20awareness&utm_medium=landing%20page&utm_source=Webflow&utm_content=Coronavirus%20Flat%20by%20Becris */
-    background: url("iconfinder_coronavirus-sars-mers-flu-virus-influenza_5728184.png");
-    transform: scale(0.7);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 64px;
-    height: 64px;
-    border: 0;
-    /* Covid icon is free from https://www.iconfinder.com/iconsets/coronavirus-flat?utm_campaign=Virus%20awareness&utm_medium=landing%20page&utm_source=Webflow&utm_content=Coronavirus%20Flat%20by%20Becris */
-    background: url("iconfinder_coronavirus-sars-mers-flu-virus-influenza_5728184.png");
-    cursor: pointer;
-  }
+  text-align: center;
+  font-family: 'Amaranth', sans-serif;
+  color: DarkSlateGrey;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Amaranth', sans-serif;
+  color: DarkSlateGrey;
+}
+
+body {
+  background-color: #F0FFFF;
+}
+
+p {
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  color: DarkSlateGrey;
+  font-size: 12pt;
+}
+
+#map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: 100% padding: 20px 30px;
+  margin: 40px 0;
+  background-color: LightYellow;
+  cursor: pointer;
+  color: DarkSlateGrey;
+  border: 1px solid DarkSlateGrey;
+  font-size: 12pt;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  /* Covid icon is free from https://www.iconfinder.com/iconsets/coronavirus-flat?utm_campaign=Virus%20awareness&utm_medium=landing%20page&utm_source=Webflow&utm_content=Coronavirus%20Flat%20by%20Becris */
+  background: url("iconfinder_coronavirus-sars-mers-flu-virus-influenza_5728184.png");
+  transform: scale(0.7);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 64px;
+  height: 64px;
+  border: 0;
+  /* Covid icon is free from https://www.iconfinder.com/iconsets/coronavirus-flat?utm_campaign=Virus%20awareness&utm_medium=landing%20page&utm_source=Webflow&utm_content=Coronavirus%20Flat%20by%20Becris */
+  background: url("iconfinder_coronavirus-sars-mers-flu-virus-influenza_5728184.png");
+  cursor: pointer;
+}
