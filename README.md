@@ -4,7 +4,7 @@
 Nick Abcarius, Andrey Yakymovych, Lia Freed-Doerr, Sabarno Islam, Zibo Zhang, Joshua Winter, Emma Baier, Kwan Tien Ooi, Yi-Hsuan Cheng
 
 # Website
-[link](https://nmabcarius.github.io/ECS171_Group_5/index.html)
+[link](https://buttered-eminent-brachiosaurus.glitch.me)
 
 *[Public Domain](https://github.com/robflaherty/us-map-raphael) code for the basic US Map interface provided by Rob Flaherty*
 
