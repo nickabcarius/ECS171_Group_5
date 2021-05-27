@@ -3,8 +3,9 @@
 ## Team members:
 Nick Abcarius, Andrey Yakymovych, Lia Freed-Doerr, Sabarno Islam, Zibo Zhang, Joshua Winter, Emma Baier, Kwan Tien Ooi, Yi-Hsuan Cheng
 
-# Website
-[link](https://buttered-eminent-brachiosaurus.glitch.me)
+# Cut-Down Version of Website
+[link](https://lively-overjoyed-gray.glitch.me)
+*To use the Full version of the website that has data analysis, you must must run the website locally using the files found on github.*
 
 *[Public Domain](https://github.com/robflaherty/us-map-raphael) code for the basic US Map interface provided by Rob Flaherty*
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <h1>COVID-19 Infection Rates</h1>
+    <p>ECS 171 Group 5</p>
+    <p>Use the slider to show a rate at a given time</p>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script src="{{url_for('raphael_min')}}"></script>
+    <script src="{{url_for('us_map_svg')}}"></script>
+    <script src="{{url_for('map')}}"></script>
+
+    <span name="whichState" id="whichState">_____</span>
+
+    <h1>Date Range Slider</h1>
+
+    <p>Day: <span id="day"></span></p>
+
+    <div class="slidecontainer">
+      <form method="POST" action="graph">
+        <input
+          type="range"
+          min="1"
+          max="480"
+          value="1"
+          class="slider"
+          id="myRange"
+          name="day_slider"
+        />
+        <input
+          type="text"
+          value=""
+          class="state"
+          id="myState"
+          name="state"
+        />
+        <p> Please select the data you'd like to view:</p>
+        <select id="graph_type" name="graph_type">
+          <option value="new_confirmed" selected="selected">New Confirmed Cases</option>
+          <option value="new_deceased">New Deceased Cases</option>
+          <option value="new_recovered">New Recovered Cases</option>
+          <option value="new_tested">New Tested Cases</option>
+          <option value="total_confirmed">Total Confirmed Cases</option>
+          <option value="total_deceased">Total Deceased Cases</option>
+          <option value="total_recovered">Total Recovered Cases</option>
+          <option value="total_tested">Total Tested Cases</option>
+          <option value="new_hospitalized">New Hospitalized Cases</option>
+          <option value="total_hospitalized">Total Hospitalized Cases</option>
+          <option value="current_hospitalized">Current Hospitalized Cases</option>
+          <option value="new_intensive_care">New Intensive Care Cases</option>
+          <option value="total_intensive_care">Total Intensive Care Cases</option>
+          <option value="current_intensive_care">Current Intensive Care Cases</option>
+          <option value="new_ventilator">New Ventilator Cases</option>
+          <option value="total_ventilator">Total Ventilator Cases</option>
+          <option value="current_ventilator">Current Ventilator Cases</option>
+          <option value="population">Population</option>
+          <option value="population_male">Male Population</option>
+          <option value="population_female">Female Population</option>
+          <option value="population_density">Population Density</option>
+          <option value="population_age_00_09">Population Age (0-9)</option>
+          <option value="population_age_10_19">Population Age (10-19)</option>
+          <option value="population_age_20_29">Population Age (20-29)</option>
+          <option value="population_age_30_39">Population Age (30-39)</option>
+          <option value="population_age_40_49">Population Age (40-49)</option>
+          <option value="population_age_50_59">Population Age (50-59)</option>
+          <option value="population_age_60_69">Population Age (60-69)</option>
+          <option value="population_age_70_79">Population Age (70-79)</option>
+          <option value="population_age_80_89">Population Age (80-89)</option>
+          <option value="population_age_90_99">Population Age (90-99)</option>
+          <option value="population_age_80_and_older">Population Age (80 and older)</option>
+        </select>
+        <br> <br>
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("day");
+
+      output.innerHTML = slider.value;
+      slider.oninput = function() {
+
+        output.innerHTML = this.value;
+      };
+    </script>
+
+    <main></main>
+  </body>
+</html>
